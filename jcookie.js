@@ -16,7 +16,6 @@
 	var cookies = {}, rawCookies;
 
 	var parseCookieVal = function (val) {
-		if (val.indexOf('"') === 0) val = val.replace(/^!\\"/g, '').replace(/\\\\/g, '\\');
 		return decodeURIComponent(val);
 	};
 

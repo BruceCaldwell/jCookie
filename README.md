@@ -28,6 +28,8 @@ $(document).on('cookieset', function(e, name, val) {
 Usage
 -----
 
+The main `$.cookie()` function is capable of anything any of the secondary functions are, but there are shorter versions available.
+
 ### Get
 
 You can get a cookie using `$.cookie()` or `$.getCookie()` or `$.getAllCookies()[]`. The `$.cookie` function is a wrapper for all of jCookie's functionality.
