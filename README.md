@@ -1,13 +1,18 @@
 jCookie.js
 ==========
 
-jQuery plugin that provides an easy way to get, set, and delete cookies in JavaScript.
+jQuery plugin that provides an easy way to get, set, and delete cookies in JavaScript. Released under GPL 3.0
 
 Why?
 ----
 
 
 There are a couple of cookie libraries available, but they come with a set of limitations that are annoying in my opinion, such as not caching cookie values when you update their values. There also have been no use of one of the greatest things about JavaScript - events. This plugin does both.
+
+Normalization
+-------------
+
+jCookie automatically `URIComponentDecode()` and `URIComponentEncode()` and will attempt to `JSON.parse()` and `JSON.stringify()` when you get and set cookies, respectively.
 
 Tracking Changes with Events
 ----------------------------
