@@ -16,8 +16,10 @@
 	var cookies = {}, rawCookies;
 
 	var parseCookieVal = function (val) {
-		if (val.indexOf('"') === 0) val = val.replace(/^!\\"/g, '').replace(/\\\\/g, '\\');
-		return decodeURIComponent(val);
+		val = String(val);
+		if (val.indexOf('"') === 0 && val.substr(-1) === '"')
+			val = val.slice(1, -1).replace(/\\"/g, '"').replace(/\\\\/g, '\\');
+		return decodeURIComponent(val.replace(/\+/g, ' '));
 	};
 
 	var setCookie = $.setCookie = function (name, val, opts) {
